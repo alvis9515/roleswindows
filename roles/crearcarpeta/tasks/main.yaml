@@ -1,0 +1,6 @@
+---
+- name: Crear carpeta en el escritorio
+  win_file:
+    path: "{{path_nueva}}"  # Ruta de la nueva carpeta
+    register: carpeta_creada
+    state: directory

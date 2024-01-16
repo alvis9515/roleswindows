@@ -1,0 +1,5 @@
+---
+- name: Reiniciar servicios detenidos
+  win_shell: Restart-Service -Name "{{ item.item }}" 
+  loop: "{{ services_status.results }}"
+  when: item.stdout.strip() == 'Stopped' and not item.failed

@@ -1,0 +1,7 @@
+---
+- name: servicio windows
+  hosts: 192.168.72.3
+  become: true
+  roles:
+    - role: 'windowsroles/roles/comprobarestadoservicio'
+    - role: 'windowsroles/roles/reinciarservicio/'

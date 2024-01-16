@@ -1,0 +1,7 @@
+---
+- name: Copiar archivo
+  win_copy:
+    src: "{{origen}}"
+    dest: "{{destino}}"
+    remote_src: true
+  register: result.stdout_lines

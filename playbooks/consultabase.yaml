@@ -1,0 +1,7 @@
+---
+- name: consulta a base de datos sql
+  hosts: 192.168.72.5
+  become: true
+  roles:
+    - role: 'windowsroles/roles/baseconsulta/'
+    - role: 'windowsroles/roles/mostrarresultados/'

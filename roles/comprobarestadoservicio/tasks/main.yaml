@@ -1,0 +1,6 @@
+---
+- name: Comprobar el estado de los servicios
+  win_shell: Get-Service -Name "{{ item }}" | Select-Object -ExpandProperty Status
+  loop: "{{ service_names }}"
+  register: services_status
+  failed_when: False  # No marcamos como fallo para manejarlo más adelante

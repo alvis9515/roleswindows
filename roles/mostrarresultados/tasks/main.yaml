@@ -1,0 +1,4 @@
+---
+- name: Mostrar resultado
+  debug:
+    var: result.stdout_lines 

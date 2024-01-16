@@ -1,0 +1,7 @@
+---
+- name: crea una carpeta y la comparte a demas usuarios
+  hosts: 192.168.72.3
+  become: true
+  roles:
+    - role: 'windowsroles/roles/crearcarpeta'
+    - role: 'windowsroles/roles/compartircarpeta'

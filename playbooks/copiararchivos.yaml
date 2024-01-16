@@ -1,0 +1,7 @@
+---
+- name: Copiar archivos a una carpeta destino dentro del servidor
+  hosts: 192.168.72.4
+  become: true
+  roles:
+    - role: 'windowsroles/roles/copiararchivoenserver'
+    - role: 'windowsroles/roles//mostrarresultados'

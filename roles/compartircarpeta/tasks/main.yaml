@@ -1,0 +1,8 @@
+---    
+- name: Agregar carpeta compartida
+  ansible.windows.win_share:
+    name: "{{nombre_carmpeta_compartir}}"
+    description: top secret share
+    path: "{{path_nueva}}"
+    list: false
+    full: Administrators
